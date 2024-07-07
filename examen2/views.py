@@ -74,3 +74,10 @@ def todo_resolved_user_list(request):
 def todo_unresolved_user_list(request):
     todos = ToDo.objects.filter(completed=False).values('id', 'user_id')
     return render(request, 'core/todo_unresolved_user_list.html', {'todos': todos})
+
+@login_required
+def change_todo_status(request, id):
+    todo = get_object_or_404(ToDo, id=id)
+    todo.completed = not todo.completed
+    todo.save()
+    return redirect('dashboard')

@@ -8,7 +8,14 @@
         <h2 class="text-center mt-5">Unresolved ToDo List</h2>
         <ul class="list-group">
             {% for todo in todos %}
-                <li class="list-group-item">ID: {{ todo.id }} - Title: {{ todo.title }}</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>
+                        <b>ID:</b> {{ todo.id }} - <b>Title:</b> {{ todo.title }}
+                    </span>
+                    <a href="{% url 'change_todo_status' todo.id %}" class="btn btn-success btn-sm">
+                        Mark as Completede
+                    </a>
+                </li>
             {% endfor %}
         </ul>
         <a href="{% url 'dashboard' %}" class="btn btn-primary mt-3">Back to Dashboard</a>

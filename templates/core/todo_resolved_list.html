@@ -8,7 +8,7 @@
         <h2 class="text-center mt-5">Resolved ToDo List</h2>
         <ul class="list-group">
             {% for todo in todos %}
-                <li class="list-group-item">ID: {{ todo.id }} - Title: {{ todo.title }}</li>
+                <li class="list-group-item"><b>ID:</b> {{ todo.id }} - <b>Title:</b> {{ todo.title }}</li>
             {% endfor %}
         </ul>
         <a href="{% url 'dashboard' %}" class="btn btn-primary mt-3">Back to Dashboard</a>

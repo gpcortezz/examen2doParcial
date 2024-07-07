@@ -3,20 +3,47 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <h2 class="text-center mt-5">Dashboard</h2>
-        <div class="d-flex flex-wrap justify-content-center mb-3">
-            <a href="{% url 'create_todo' %}" class="btn btn-primary m-2">Create ToDo</a>
-            <a href="{% url 'todo-list' %}" class="btn btn-primary m-2">View All Todos</a>
-            <a href="{% url 'todo-id-title-list' %}" class="btn btn-primary m-2">View Todos with Titles</a>
-            <a href="{% url 'todo-unresolved-list' %}" class="btn btn-primary m-2">View Unresolved Todos</a>
-            <a href="{% url 'todo-resolved-list' %}" class="btn btn-primary m-2">View Resolved Todos</a>
-            <a href="{% url 'todo-user-list' %}" class="btn btn-primary m-2">View Todos by User</a>
-            <a href="{% url 'todo-resolved-user-list' %}" class="btn btn-primary m-2">View Resolved Todos by User</a>
-            <a href="{% url 'todo-unresolved-user-list' %}" class="btn btn-primary m-2">View Unresolved Todos by User</a>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h2 class="mb-0">Dashboard</h2>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-center mb-3">
+                        <a href="{% url 'create_todo' %}" class="btn btn-outline-primary m-2">
+                            <i class="fas fa-plus-circle"></i> Create ToDo
+                        </a>
+                        <a href="{% url 'todo-list' %}" class="btn btn-outline-success m-2">
+                            <i class="fas fa-list"></i> View All Todos
+                        </a>
+                        <a href="{% url 'todo-id-title-list' %}" class="btn btn-outline-info m-2">
+                            <i class="fas fa-tasks"></i> View Todos with Titles
+                        </a>
+                        <a href="{% url 'todo-unresolved-list' %}" class="btn btn-outline-warning m-2">
+                            <i class="fas fa-exclamation-circle"></i> View Unresolved Todos
+                        </a>
+                        <a href="{% url 'todo-resolved-list' %}" class="btn btn-outline-success m-2">
+                            <i class="fas fa-check-circle"></i> View Resolved Todos
+                        </a>
+                        <a href="{% url 'todo-user-list' %}" class="btn btn-outline-primary m-2">
+                            <i class="fas fa-user"></i> View Todos by User
+                        </a>
+                        <a href="{% url 'todo-resolved-user-list' %}" class="btn btn-outline-success m-2">
+                            <i class="fas fa-user-check"></i> View Resolved Todos by User
+                        </a>
+                        <a href="{% url 'todo-unresolved-user-list' %}" class="btn btn-outline-warning m-2">
+                            <i class="fas fa-user-times"></i> View Unresolved Todos by User
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 {% endblock %}

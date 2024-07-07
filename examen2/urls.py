@@ -14,4 +14,5 @@ urlpatterns = [
     path('todos/user/', views.todo_user_list, name='todo-user-list'),
     path('todos/resolved/user/', views.todo_resolved_user_list, name='todo-resolved-user-list'),
     path('todos/unresolved/user/', views.todo_unresolved_user_list, name='todo-unresolved-user-list'),
+    path('change-status/<int:id>/', change_todo_status, name='change_todo_status'),
 ]
