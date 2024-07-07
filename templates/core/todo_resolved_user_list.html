@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Resolved ToDo List by User{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center mt-5">Resolved ToDo List by User</h2>
+        <ul class="list-group">
+            {% for todo in todos %}
+                <li class="list-group-item">ID: {{ todo.id }} - User ID: {{ todo.user.id }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'dashboard' %}" class="btn btn-primary mt-3">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}

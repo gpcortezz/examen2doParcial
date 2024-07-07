@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center mt-5">Dashboard</h2>
+        <div class="d-flex flex-wrap justify-content-center mb-3">
+            <a href="{% url 'create_todo' %}" class="btn btn-primary m-2">Create ToDo</a>
+            <a href="{% url 'todo-list' %}" class="btn btn-primary m-2">View All Todos</a>
+            <a href="{% url 'todo-id-title-list' %}" class="btn btn-primary m-2">View Todos with Titles</a>
+            <a href="{% url 'todo-unresolved-list' %}" class="btn btn-primary m-2">View Unresolved Todos</a>
+            <a href="{% url 'todo-resolved-list' %}" class="btn btn-primary m-2">View Resolved Todos</a>
+            <a href="{% url 'todo-user-list' %}" class="btn btn-primary m-2">View Todos by User</a>
+            <a href="{% url 'todo-resolved-user-list' %}" class="btn btn-primary m-2">View Resolved Todos by User</a>
+            <a href="{% url 'todo-unresolved-user-list' %}" class="btn btn-primary m-2">View Unresolved Todos by User</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
